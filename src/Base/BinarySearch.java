@@ -1,4 +1,5 @@
 package Base;
+import Tool.In;
 import Tool.StdIn;
 import java.util.Arrays;
 
@@ -20,16 +21,15 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        System.out.println(1);
-        int[] whitelist = {45,34,78,23,98,12};
+        System.out.println("WhiteList's numbers are:");
+//        int[] whitelist = {45,34,78,23,98,12};
+        int[] whitelist = In.readInts(args[0]);
         Arrays.sort(whitelist);
         System.out.println(Arrays.toString(whitelist));
         while(!StdIn.isEmpty()){
             int key = StdIn.readInt();
             if(rank(key,whitelist)<0)
-                System.out.println("没找到");
-            else
-                System.out.println("找到了");
+                System.out.println("NumberList's "+key+" is not in whiteList");
         }
     }
 }

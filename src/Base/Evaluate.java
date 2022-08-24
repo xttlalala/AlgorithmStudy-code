@@ -1,9 +1,8 @@
 package Base;
 
 import Tool.StdIn;
-
 import java.util.Stack;
-
+//双栈算术表达式求值算法
 public class Evaluate {
     public static void main(String[] args) {
         Stack<String> ops = new Stack<String>();

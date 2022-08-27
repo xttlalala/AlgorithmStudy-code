@@ -34,7 +34,7 @@ public class LinkedlistStack<Item>  {
     }
     public static void main(String[] args) {
         LinkedlistStack<String> s;
-        s = new LinkedlistStack<>();
+        s = new LinkedlistStack<String>();
         s.push("hello");
         s.push("My");
         s.push("name");

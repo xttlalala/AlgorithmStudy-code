@@ -2,12 +2,14 @@ package Sort;
 
 import Tool.StdRandom;
 import Tool.StopWatch;
-
+//SortCpmpare这类程序对于渐进式的算法研究十分重要。每一步，我们都能用这类程序来了解
+//新的或是改进过的算法的性能是否产生了预期的进步。
 public class SortCompare {
     public static double time(String alg,Comparable[] a){
         StopWatch timer = new StopWatch();
         if(alg.equals("Insertion")) Insertion.sort(a);
         if(alg.equals("Selection")) Selection.sort(a);
+        if(alg.equals("Shell")) Shell.sort(a);
         return timer.elapsedTime();
     }
     //使用某排序算法将T个长度为N的数组排序

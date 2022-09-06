@@ -11,6 +11,7 @@ public class SortCompare {
         if(alg.equals("Selection")) Selection.sort(a);
         if(alg.equals("Shell")) Shell.sort(a);
         if(alg.equals("Merge")) Merge.sort(a);
+        if(alg.equals("MergeBU")) MergeBU.sort(a);
         return timer.elapsedTime();
     }
     //使用某排序算法将T个长度为N的数组排序

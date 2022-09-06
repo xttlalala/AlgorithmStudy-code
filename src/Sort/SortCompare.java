@@ -10,6 +10,7 @@ public class SortCompare {
         if(alg.equals("Insertion")) Insertion.sort(a);
         if(alg.equals("Selection")) Selection.sort(a);
         if(alg.equals("Shell")) Shell.sort(a);
+        if(alg.equals("Merge")) Merge.sort(a);
         return timer.elapsedTime();
     }
     //使用某排序算法将T个长度为N的数组排序
@@ -32,12 +33,15 @@ public class SortCompare {
         int T = Integer.parseInt(args[3]) ;
         double t1 = timeRandomInput(alg1,N,T);
         double t2 = timeRandomInput(alg2,N,T);
+        System.out.println("For "+N+" random Doubles,");
+        System.out.println(alg1+"'s time is "+t1+"s.");
+        System.out.println(alg2+"'s time is "+t2+"s.");
         boolean result = t1<t2?true:false;
         if(result){
-            System.out.println("For "+N+" random Doubles,"+alg1+" is "+(t2/t1)+" times faster than "+alg2);
+            System.out.println(alg1+" is "+(t2/t1)+" times faster than "+alg2);
         }
         else{
-            System.out.println("For "+N+" random Doubles,"+alg2+" is "+(t1/t2)+" times faster than "+alg1);
+            System.out.println(alg2+" is "+(t1/t2)+" times faster than "+alg1);
         }
     }
 }

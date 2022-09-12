@@ -164,6 +164,9 @@ public class Transaction implements Comparable<Transaction> {
 
         @Override
         public int compare(Transaction v, Transaction w) {
+//            Double m = new Double(v.amount);
+////            Double n = new Double(w.amount);
+////            return m.compareTo(n);
             return Double.compare(v.amount, w.amount);
         }
     }

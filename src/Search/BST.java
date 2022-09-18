@@ -209,8 +209,10 @@ public class BST<Key extends Comparable<Key>,Value> {
         System.out.println(st.select(5));
         System.out.println(st.rank("A"));
         st.show();
-        st.deleteMin();;
-        st.show();
+        //st.deleteMin();;
+        //st.show();
+        st.delete("P");
+        for(String s:st.keys())
+            System.out.println(s+" "+st.get(s));
     }
-
 }
